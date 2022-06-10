@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Pages/Home';
+import Admin from './components/Pages/Admin';
+import Register from './components/Pages/Register';
+import Login from './components/Pages/Login';
+import { useState, useEffect } from 'react';
 
 function App() {
+
+  let user;
+
+  if(sessionStorage.getItem('email')){
+    user = sessionStorage.getItem('email')
+  }
+  console.log(sessionStorage);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      {user &&
+        <>
+          <Route path='/' element={<Home />} />
+          <Route path='/admin' element={<Admin />} />
+        </>
+      }
+      {!user &&
+        <>
+          <Route path='/' element={<Register />}/>
+          <Route path='/login' element={<Login />} />
+        </>
+      }
+    </Routes>
   );
 }
 

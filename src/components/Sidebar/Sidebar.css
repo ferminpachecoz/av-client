@@ -1,0 +1,39 @@
+.sidebar-container{
+  width: 15%;
+  height: 100vh;
+  background-color: #3456FF;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.navigation{
+  padding-left: 0;
+}
+.navigation li{
+  list-style: none;
+  margin-top: 15px;
+}
+.navigation li button{
+  text-decoration: none;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+  color: #F8F8FA;
+  font-size: 1em;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.navigation li button:hover{
+  color: #070928;
+  background-color: #F8F8FA;
+}
+.navigation li button a{
+  text-decoration: none;
+}
+.navigation li button a:visited{
+  color: #F8F8FA;
+}
+.navigation li button:hover a:visited{
+  color: #070928;
+}
