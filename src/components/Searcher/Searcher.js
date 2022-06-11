@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Row, Button, InputGroup, Form} from 'react-bootstrap';
+import {Col, Button, InputGroup, Form} from 'react-bootstrap';
 import { useState } from 'react';
 
 export default function Searcher(props) {

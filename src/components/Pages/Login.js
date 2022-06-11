@@ -3,7 +3,6 @@ import './Register.css';
 import { useState, useEffect } from 'react';
 
 export default function Login() {
-  const [error, setError] = useState({});
   const [input, setInput] = useState({});
   const [user, setUser] = useState({});
 
@@ -73,7 +72,7 @@ export default function Login() {
             </div>
             <div className='row'>
               <div className='col'>
-                <a href="#" className='link-secondary'>Forgot my password</a>
+                <a href="/nada" className='link-secondary'>Forgot my password</a>
               </div>
               <div className="form-check col">
                 <label className="form-check-label text-white" htmlFor="flexCheckDefault">Remember me</label>

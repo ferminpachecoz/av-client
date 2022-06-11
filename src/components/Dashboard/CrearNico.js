@@ -1,7 +1,6 @@
 import React from 'react'
 import { Form, Button, Col, InputGroup, Alert } from 'react-bootstrap';
 import { useState } from 'react';
-import PropTypes from 'prop-types';
 
 function CrearNico({setting, funcion, selectNico, mensaje}) {
   

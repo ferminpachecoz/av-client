@@ -4,18 +4,12 @@ import { useState } from 'react';
 
 export default function CrearSeccion({seccion}) {
 
-  const [seccionC, setSeccionC] = useState({});
-  const [seccionU, setSeccionU] = useState({});
-  const [seccionD, setSeccionD] = useState({});
-
   const [titleC, setTitleC] = useState('');
   const [notaSecC, setNotaSecC] = useState('');
-  const [statusC, setStatusC] = useState({});
 
   const [idU, setIdU] = useState('')
   const [titleU, setTitleU] = useState('');
   const [notaSecU, setNotaSecU] = useState('');
-  const [statusU, setStatusU] = useState({});
 
   const [idD, setIdD] = useState('');
   const [statusD, setStatusD] = useState({})

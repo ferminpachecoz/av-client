@@ -96,7 +96,7 @@ export default function Register() {
             </div>
             <div className='row'>
               <div className='col'>
-                <a href="#" className='link-secondary'>Forgot my password</a>
+                <a href="/nada" className='link-secondary'>Forgot my password</a>
               </div>
               <div className="form-check col">
                 <label className="form-check-label text-white" htmlFor="flexCheckDefault">Remember me</label>

@@ -4,7 +4,6 @@ import Home from './components/Pages/Home';
 import Admin from './components/Pages/Admin';
 import Register from './components/Pages/Register';
 import Login from './components/Pages/Login';
-import { useState, useEffect } from 'react';
 
 function App() {
 

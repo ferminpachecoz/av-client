@@ -1,5 +1,5 @@
 import React from 'react'
-import {Table, Col, Row, Button} from 'react-bootstrap';
+import {Table, Col} from 'react-bootstrap';
 import './Tabley.css';
 
 export default function Tabley({data, capitulo, seccion}) {
