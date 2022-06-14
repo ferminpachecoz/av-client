@@ -37,7 +37,7 @@ export default function CrearCapitulo({capitulos, seccion, func, statusCreate}) 
       },
       body: JSON.stringify(data)
     }
-    fetch('https://av-server.herokuapp.com/select-update', reqData)
+    fetch('/select-update', reqData)
       .then(res => res.json())
       .then(a => setSUpdate(a))
       .catch(err => console.error(err))
@@ -56,7 +56,7 @@ export default function CrearCapitulo({capitulos, seccion, func, statusCreate}) 
       method:"POST",
       body: data
     }
-    fetch('https://av-server.herokuapp.com/crear-capitulo', reqData)
+    fetch('/crear-capitulo', reqData)
       .then(res => res.json())
       .then(a => console.log(a))
       .catch(err => console.error(err))
@@ -83,7 +83,7 @@ export default function CrearCapitulo({capitulos, seccion, func, statusCreate}) 
       body: data
     }
 
-    fetch('https://av-server.herokuapp.com/editar-capitulo', reqData)
+    fetch('/editar-capitulo', reqData)
       .then(res => res.json())
       .then(a => window.location.reload(true))
       .catch(err => console.error(err))
@@ -92,7 +92,7 @@ export default function CrearCapitulo({capitulos, seccion, func, statusCreate}) 
   const handleDelete = e =>{
     let data = {id: dCapitulo}
 
-    func(data, 'https://av-server.herokuapp.com/eliminar-capitulo');
+    func(data, '/eliminar-capitulo');
   }
 
   console.log(uIdSeccion);

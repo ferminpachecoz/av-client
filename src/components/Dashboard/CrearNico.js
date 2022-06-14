@@ -11,7 +11,7 @@ function CrearNico({setting, funcion, selectNico, mensaje}) {
   return (
     <div>
       <Col xs={10}>
-        <Form onSubmit={() => funcion(nicoC, 'https://av-server.herokuapp.com/crear-nico')}>
+        <Form onSubmit={() => funcion(nicoC, '/crear-nico')}>
           <h4>Crear Registro NICO</h4>
           <Form.Group className='mb-3'>
             <Form.Label>Código:</Form.Label>
@@ -53,7 +53,7 @@ function CrearNico({setting, funcion, selectNico, mensaje}) {
 
         <hr/>
         
-        <Form onSubmit={e => funcion(nicoU, 'https://av-server.herokuapp.com/buscar-nico', e)}>
+        <Form onSubmit={e => funcion(nicoU, '/buscar-nico', e)}>
           <h4>Editar Registro NICO</h4>
           <Form.Group className='mb-3'>
             <Form.Label>Código:</Form.Label>
@@ -64,7 +64,7 @@ function CrearNico({setting, funcion, selectNico, mensaje}) {
           </Form.Group>
         </Form>
         {selectNico &&
-          <Form onSubmit={e => funcion(nicoU, 'https://av-server.herokuapp.com/editar-nico', e)}>
+          <Form onSubmit={e => funcion(nicoU, '/editar-nico', e)}>
             <Form.Group className='mb-3'>
               <Form.Label>NICO</Form.Label>
               <Form.Control defaultValue={selectNico.nico} placeholder='Introducir NICO...' name="nico" onChange={e => setting(nicoU, setNicoU, e)}/>
@@ -98,7 +98,7 @@ function CrearNico({setting, funcion, selectNico, mensaje}) {
             <Button type='submit'>Editar</Button>
           </Form>
         }
-        <Form onSubmit={e => funcion(nicoD, 'https://av-server.herokuapp.com/eliminar-nico', e)}>
+        <Form onSubmit={e => funcion(nicoD, '/eliminar-nico', e)}>
           <h4>Eliminar Registro NICO</h4>
           {mensaje && <Alert variant='success'><p>{mensaje}</p></Alert>}
           <Form.Group className='mb-3'>

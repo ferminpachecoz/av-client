@@ -16,7 +16,7 @@ export default function Home() {
   }
 
   useEffect(() =>{
-    fetch(`https://av-server.herokuapp.com/query?name=${frac}&descripcion=${desc}`)
+    fetch(`/query?name=${frac}&descripcion=${desc}`)
       .then(res => res.json())
       .then(data => setData(data))
       .catch(err => console.error(err))

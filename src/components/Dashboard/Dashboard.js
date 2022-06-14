@@ -13,14 +13,14 @@ export default function Dashboard() {
   const [mensaje, setMensaje] = useState('');
 
   useEffect(() => {
-    fetch('https://av-server.herokuapp.com/capitulos')
+    fetch('/capitulos')
       .then(res => res.json())
       .then(data => setData(data))
       .catch(err => console.error(err))
   }, [])
 
   useEffect(() => {
-    fetch('https://av-server.herokuapp.com/secciones')
+    fetch('/secciones')
       .then(res => res.json())
       .then(data => setSeccion(data))
       .catch(err => console.error(err))

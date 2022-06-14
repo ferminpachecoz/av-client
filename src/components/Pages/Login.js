@@ -21,10 +21,10 @@ export default function Login() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(input),
-      mode: "no cors",
+      mode: "cors",
 
     }
-    fetch('https://av-server.herokuapp.com/users/login', reqData)
+    fetch('/users/login', reqData)
       .then(res => res.json())
       .then(a => setUser(a))
       .catch(err => console.error(err))

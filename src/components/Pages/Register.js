@@ -21,9 +21,9 @@ export default function Register() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(input),
-      mode: "no cors"
+      mode: "cors"
     }
-    fetch('https://av-server.herokuapp.com/users/register', reqData)
+    fetch('/users/register', reqData)
       .then(res => res.json())
       .then(a => a.errors?setError(a.errors):setUser(a))
       .catch(err => console.error(err))

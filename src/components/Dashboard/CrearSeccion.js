@@ -26,7 +26,7 @@ export default function CrearSeccion({seccion}) {
       body: data
     }
 
-    fetch('https://av-server.herokuapp.com/crear-seccion', reqData)
+    fetch('/crear-seccion', reqData)
       .then(res => res.json())
       .then(a => console.log(a))
       .catch(err => console.error(err))
@@ -46,7 +46,7 @@ export default function CrearSeccion({seccion}) {
       body: data
     }
 
-    fetch('https://av-server.herokuapp.com/editar-seccion', reqData)
+    fetch('/editar-seccion', reqData)
       .then(res => res.json())
       .then(a => console.log(a))
       .catch(err => console.error(err))
@@ -65,7 +65,7 @@ export default function CrearSeccion({seccion}) {
       },
       body: JSON.stringify(data)
     }
-    fetch('https://av-server.herokuapp.com/eliminar-seccion', reqData)
+    fetch('/eliminar-seccion', reqData)
       .then(res => res.json())
       .then(a => setStatusD(a.status + 1))
       .catch(err => console.error(err))
