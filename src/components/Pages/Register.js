@@ -18,9 +18,11 @@ export default function Register() {
     const reqData={
       method: "POST",
       headers:{
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        'Access-Control-Allow-Origin': '*'
       },
-      body: JSON.stringify(input)
+      body: JSON.stringify(input),
+      mode: "cors"
     }
     fetch('https://av-server.herokuapp.com/users/register', reqData)
       .then(res => res.json())
